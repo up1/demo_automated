@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Demo TDD :: Grade Converter</title>
+<title>-- Demo TDD :: Grade Converter --</title>
 </head>
 <body>
 
