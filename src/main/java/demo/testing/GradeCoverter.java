@@ -18,8 +18,7 @@ public class GradeCoverter {
 			else if(score >= 50) return "D";
 			return "C";
 		} else {
-			return "Unknown";
-			
+			return "Unknownxxxx";
 		}
 	}
 
