@@ -16,7 +16,7 @@ public class Grade {
 				return "F";
 			}
 		}
-		return "Error";
+		return "Unknown";
 	}
 
 }
