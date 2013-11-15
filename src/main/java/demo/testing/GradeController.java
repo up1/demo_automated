@@ -27,7 +27,7 @@ public class GradeController extends HttpServlet {
 		ServletOutputStream out = resp.getOutputStream();
 		String result = "Unknown";
 		String score = req.getParameter("score");
-		if( score != null && score.equals("") ) {
+		if( score != null && !score.equals("") ) {
 			Grade grade = new Grade();
 			result = grade.calculate(Integer.parseInt(score));
 		}
