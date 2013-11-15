@@ -25,7 +25,7 @@ public class GradeController extends HttpServlet {
 
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		ServletOutputStream out = resp.getOutputStream();
-		out.println("TODO next");
+		out.println("TODO next 2");
 		out.flush();
 		out.close();
 	}
