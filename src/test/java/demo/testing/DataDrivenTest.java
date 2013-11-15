@@ -25,11 +25,12 @@ public class DataDrivenTest {
 		Object[][] data = new Object[][] { { 80, "A" }, { 70, "B" }, { 60, "C" }, { 50, "D" } };
 		return Arrays.asList(data);
 	}
+	
+	Grade gradeObject = new Grade();
 
 	@Test
 	public void testConvertScoreToGrade() throws Exception {
-		GradeCoverter converter = new GradeCoverter();
-		String result = converter.convert(score);
+		String result = gradeObject.calculate(score);
 		Assert.assertEquals(grade, result);
 	}
 
