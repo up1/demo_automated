@@ -31,7 +31,7 @@ public class DataDrivenTest {
 	@Test
 	public void testConvertScoreToGrade() throws Exception {
 		String result = gradeObject.calculate(score);
-		Assert.assertEquals(grade, result);
+		Assert.assertEquals(grade, result );
 	}
 
 }
