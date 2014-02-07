@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Demo TDD for Spartan :: Grade Converter</h1>
+   <h1>Demo TDD for Spartan :: Grade Converter Jan 2014</h1>
 
 	<form action="/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
