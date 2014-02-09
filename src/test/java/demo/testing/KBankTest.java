@@ -28,5 +28,6 @@ public class KBankTest {
 		Assert.assertEquals("B", gradeCoverter.convert(70));
 		Assert.assertEquals("C", gradeCoverter.convert(60));
 		Assert.assertEquals("D", gradeCoverter.convert(50));
+		Assert.assertEquals("F", gradeCoverter.convert(40));
 	}
 }
