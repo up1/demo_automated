@@ -31,7 +31,7 @@ public class TaxController extends HttpServlet {
 			Tax tax = new Tax();
 			result = Double.toString(tax.compute(Integer.parseInt(salary)));
 		}
-		out.println("Your Tax in this 2014 : " + result + " Baht.");
+		out.println("Your Tax in year 2014 : " + result + " Baht.");
 		out.flush();
 		out.close();
 	}
