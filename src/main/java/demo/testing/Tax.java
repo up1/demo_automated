@@ -7,11 +7,10 @@ public class Tax {
 	double[] taxStep = { 0.05, 0.10, 0.15, 0.20, 0.25, 0.30 };
 
 	public double compute(int income) {
-		if (income <= 150000) {
-			return 0;
-		} else {
+		if (income > 150000) {
 			return calculateTax(income - 150000, 0);
-		}
+		} 
+		return 0;
 	}
 	
 	private double calculateTax( double remainIncome, int row ) {
