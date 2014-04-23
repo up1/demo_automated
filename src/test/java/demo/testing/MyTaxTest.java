@@ -5,6 +5,14 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MyTaxTest {
+	
+	@Test
+	public void salaryEqual0kBahtShouldNotHaveTax() {
+		double expectedResult = 0;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(0);
+		assertEquals(expectedResult, actualTax, 2);
+	}
 
 	@Test
 	public void salaryEqual150kBahtShouldNotHaveTax() {
@@ -75,6 +83,14 @@ public class MyTaxTest {
 		double expectedResult = 365000;
 		Tax tax = new Tax();
 		double actualTax = tax.compute(2000000);
+		assertEquals(expectedResult, actualTax, 2);
+	}
+	
+	@Test
+	public void salaryEqual3mBahtShouldHaveTax115000Baht() {
+		double expectedResult = 665000;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(3000000);
 		assertEquals(expectedResult, actualTax, 2);
 	}
 
