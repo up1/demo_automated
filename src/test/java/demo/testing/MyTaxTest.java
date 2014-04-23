@@ -61,5 +61,13 @@ public class MyTaxTest {
 		double actualTax = tax.compute(900000);
 		assertEquals(expectedResult, actualTax, 2);
 	}
+	
+	@Test
+	public void salaryEqual1mBahtShouldHaveTax115000Baht() {
+		double expectedResult = 115000;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(1000000);
+		assertEquals(expectedResult, actualTax, 2);
+	}
 
 }
