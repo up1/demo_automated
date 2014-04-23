@@ -79,7 +79,7 @@ public class MyTaxTest {
 	}
 	
 	@Test
-	public void salaryEqual2mBahtShouldHaveTax115000Baht() {
+	public void salaryEqual2mBahtShouldHaveTax365000Baht() {
 		double expectedResult = 365000;
 		Tax tax = new Tax();
 		double actualTax = tax.compute(2000000);
@@ -87,10 +87,34 @@ public class MyTaxTest {
 	}
 	
 	@Test
-	public void salaryEqual3mBahtShouldHaveTax115000Baht() {
+	public void salaryEqual3mBahtShouldHaveTax665000Baht() {
 		double expectedResult = 665000;
 		Tax tax = new Tax();
 		double actualTax = tax.compute(3000000);
+		assertEquals(expectedResult, actualTax, 2);
+	}
+	
+	@Test
+	public void salaryEqual4mBahtShouldHaveTax965000Baht() {
+		double expectedResult = 965000;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(4000000);
+		assertEquals(expectedResult, actualTax, 2);
+	}
+	
+	@Test
+	public void salaryEqual5mBahtShouldHaveTax1315000Baht() {
+		double expectedResult = 1315000;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(5000000);
+		assertEquals(expectedResult, actualTax, 2);
+	}
+	
+	@Test
+	public void salaryEqual50mBahtShouldHaveTax3065000Baht() {
+		double expectedResult = 3065000;
+		Tax tax = new Tax();
+		double actualTax = tax.compute(10000000);
 		assertEquals(expectedResult, actualTax, 2);
 	}
 
