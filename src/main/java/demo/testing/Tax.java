@@ -2,30 +2,21 @@ package demo.testing;
 
 public class Tax {
 
+	double[] salaryStep = { 150000, 200000, 250000, 250000, 1000000, 2000000 };
+
+	double[] taxStep = { 0.05, 0.10, 0.15, 0.20, 0.25, 0.30 };
+
 	public double compute(int income) {
-		
-		if(income > 750000) {
-			income = income - 150000;
-			if(income > 150000) {
-				return  7500 +  20000 + 37500 + (income - 150000 - 200000 - 250000) * (0.20);
-			} 
-		}	
-		if(income > 500000) {
-			income = income - 150000;
-			if(income > 150000) {
-				return  7500 +  20000 +  (income - 150000 - 200000) * (0.15);
-			} 
+		if (income <= 150000) {
+			return 0;
+		} else {
+			return calculateTax(income - 150000, 0);
 		}
-		if(income > 300000) {
-			income = income - 150000;
-			if(income > 150000) {
-				return  7500 +  (income - 150000) * (0.10);
-			} 
-		}
-		if(income > 150000) {
-			return (income - 150000) * (0.05);
-		}
-		return 0;
+	}
+	
+	private double calculateTax( double remainIncome, int row ) {
+		if(remainIncome - salaryStep[row] < 0) return remainIncome * taxStep[row];
+		return (salaryStep[row]* taxStep[row]) + calculateTax(remainIncome - salaryStep[row], row+1);
 	}
 
 }
