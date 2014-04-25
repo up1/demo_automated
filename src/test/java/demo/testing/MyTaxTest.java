@@ -125,7 +125,7 @@ public class MyTaxTest {
 	public void testNumberFormat2pointAfter() throws Exception {
 		NumberFormat decimalFormat = new DecimalFormat("###.00");
 		String output = decimalFormat.format(1000.109010);
-		assertEquals("1000.10", output);
+		assertEquals("1000.11", output);
 	}
 
 }
