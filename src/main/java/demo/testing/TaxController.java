@@ -31,11 +31,18 @@ public class TaxController extends HttpServlet {
 		String salary = req.getParameter("salary");
 		if( salary != null && !salary.equals("") ) {
 			Tax tax = new Tax();
-			NumberFormat decimalFormat = new DecimalFormat("###.00");
-			result = decimalFormat.format(tax.compute(Double.parseDouble(salary)));
+			result = formatOutput((tax.compute(Double.parseDouble(salary))));
 		}
 		out.println("Your Tax in year 2014 : " + result + " Baht.");
 		out.flush();
 		out.close();
+	}
+	
+	private String formatOutput(double tax) {
+		NumberFormat decimalFormat = new DecimalFormat();
+		decimalFormat.setMinimumFractionDigits(2);
+		decimalFormat.setMaximumFractionDigits(2);
+		decimalFormat.setGroupingUsed(false);
+		return decimalFormat.format(tax);
 	}
 }

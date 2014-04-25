@@ -127,8 +127,8 @@ public class MyTaxTest {
 		decimalFormat.setMinimumFractionDigits(2);
 		decimalFormat.setMaximumFractionDigits(2);
 		decimalFormat.setGroupingUsed(false);
-		String output = decimalFormat.format(0.26111);
-		assertEquals("0.26", output);
+		String output = decimalFormat.format(0.05);
+		assertEquals("0.05", output);
 	}
 
 }
