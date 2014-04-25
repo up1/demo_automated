@@ -2,6 +2,9 @@ package demo.testing;
 
 import static org.junit.Assert.*;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 import org.junit.Test;
 
 public class MyTaxTest {
@@ -23,7 +26,7 @@ public class MyTaxTest {
 	}
 	
 	@Test
-	public void salaryEqual200kBahtShouldHaveTax5000Baht() {
+	public void salaryEqual200kBahtShouldHaveTax2500Baht() {
 		double expectedResult = 2500;
 		Tax tax = new Tax();
 		double actualTax = tax.compute(200000);
@@ -116,6 +119,13 @@ public class MyTaxTest {
 		Tax tax = new Tax();
 		double actualTax = tax.compute(10000000);
 		assertEquals(expectedResult, actualTax, 2);
+	}
+	
+	@Test
+	public void testNumberFormat2pointAfter() throws Exception {
+		NumberFormat decimalFormat = new DecimalFormat("###.00");
+		String output = decimalFormat.format(1000.109010);
+		assertEquals("1000.10", output);
 	}
 
 }

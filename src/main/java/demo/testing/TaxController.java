@@ -1,6 +1,8 @@
 package demo.testing;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -29,7 +31,8 @@ public class TaxController extends HttpServlet {
 		String salary = req.getParameter("salary");
 		if( salary != null && !salary.equals("") ) {
 			Tax tax = new Tax();
-			result = Double.toString(tax.compute(Double.parseDouble(salary)));
+			NumberFormat decimalFormat = new DecimalFormat("###.00");
+			result = decimalFormat.format(tax.compute(Double.parseDouble(salary)));
 		}
 		out.println("Your Tax in year 2014 : " + result + " Baht.");
 		out.flush();
