@@ -8,7 +8,7 @@ public class Tax {
 
 	double[] taxStep = { 0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35 };
 
-	public double compute(int income) {
+	public double compute(double income) {
 		double summaryTax = 0;
 		if (income > MIN_SALARY) {
 			summaryTax = calculateTax(income - MIN_SALARY, 0);

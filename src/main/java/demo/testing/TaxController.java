@@ -29,7 +29,7 @@ public class TaxController extends HttpServlet {
 		String salary = req.getParameter("salary");
 		if( salary != null && !salary.equals("") ) {
 			Tax tax = new Tax();
-			result = Double.toString(tax.compute(Integer.parseInt(salary)));
+			result = Double.toString(tax.compute(Double.parseDouble(salary)));
 		}
 		out.println("Your Tax in year 2014 : " + result + " Baht.");
 		out.flush();
