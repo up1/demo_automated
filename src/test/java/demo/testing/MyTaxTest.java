@@ -123,11 +123,8 @@ public class MyTaxTest {
 	
 	@Test
 	public void testNumberFormat2pointAfter() throws Exception {
-		NumberFormat decimalFormat = new DecimalFormat();
-		decimalFormat.setMinimumFractionDigits(2);
-		decimalFormat.setMaximumFractionDigits(2);
-		decimalFormat.setGroupingUsed(false);
-		String output = decimalFormat.format(0.05);
+		TaxController taxController = new TaxController();
+		String output = taxController.formatOutput(0.05);
 		assertEquals("0.05", output);
 	}
 
