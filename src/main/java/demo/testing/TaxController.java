@@ -38,7 +38,7 @@ public class TaxController extends HttpServlet {
 		out.close();
 	}
 	
-	private String formatOutput(double tax) {
+	public String formatOutput(double tax) {
 		NumberFormat decimalFormat = new DecimalFormat();
 		decimalFormat.setMinimumFractionDigits(2);
 		decimalFormat.setMaximumFractionDigits(2);
