@@ -127,5 +127,4 @@ public class MyTaxTest {
 		String output = taxController.formatOutput(0.05);
 		assertEquals("0.05", output);
 	}
-
 }
