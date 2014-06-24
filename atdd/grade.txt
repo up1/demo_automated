@@ -1,0 +1,10 @@
+*** Settings ***
+Library		Selenium2Library
+
+*** Variables ***
+
+*** Testcases ***
+Valid case
+	Open Browser    http://demo-automated.herokuapp.com/
+
+*** Keywords ***
