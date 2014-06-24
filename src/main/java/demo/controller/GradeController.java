@@ -34,6 +34,7 @@ public class GradeController extends HttpServlet {
 			//GradeCoverter grade = new GradeCoverter();
 			//result = grade.convert(Integer.parseInt(score));
 		}
+		result = "Grade=A+";
 		out.println(result);
 		out.flush();
 		out.close();
