@@ -10,3 +10,5 @@ Demo automated application
 $mvn clean install cobertura:cobertura
 $cd target/bin/webapp
 ```
+
+<a href="https://heroku.com/deploy"><img border="0" alt="Deploy" src="https://www.herokucdn.com/deploy/button.png" /> </a>
