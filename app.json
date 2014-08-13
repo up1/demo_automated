@@ -1,0 +1,10 @@
+{
+  "name": "Automated Java with Heroku Application",
+  "description": "This application is used to deploy a simple Java application to Heroku",
+  "keywords": ["java"],
+  "env": {
+    "FAVORITE_WEBSITE": {
+      "description": "A deploy-time environment variable."
+    }
+  }
+}
