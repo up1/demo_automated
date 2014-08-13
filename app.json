@@ -1,5 +1,5 @@
 {
-  "name": "Automated Java with Heroku Application",
+  "name": "Java Application",
   "description": "This application is used to deploy a simple Java application to Heroku",
   "keywords": ["java"],
   "env": {
