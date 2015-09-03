@@ -24,4 +24,9 @@ public class ConvertGradeTest {
 		assertEquals("C", grade.convert(69));
 	}
 	
+	@Test
+	public void shouldGradeCWhenScoreIs692() {
+		assertEquals("C", grade.convert(69));
+	}
+	
 }
