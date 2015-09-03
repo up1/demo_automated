@@ -6,7 +6,7 @@
 </head>
 <body>
 
-	<h1>Demo ATDD/TDD for QA Course</h1>
+	<h1>Demo Automated Testing</h1>
 
 	<form action="<%=getServletContext().getContextPath()%>/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
