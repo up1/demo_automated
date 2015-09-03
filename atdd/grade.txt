@@ -4,8 +4,27 @@ Library		Selenium2Library
 *** Variables ***
 
 *** Testcases ***
-Valid case
-	Open Browser    http://localhost:8099/demo/
-	Close Browser
+ทดสอบการให้เกรด A เมื่อได้ 81 คะแนน
+	เปิด Browser ไปที่หน้าคำนวณ
+	กรอกข้อมูล 81 คะแนน
+	กดปุ่มคำนวณเกรด
+	ตรวจสอบผลลัพธ์เท่ากับ A หรือไม่
+	
 
 *** Keywords ***
+เปิด Browser ไปที่หน้าคำนวณ
+	Open Browser    http://localhost:8099/demo/
+
+กรอกข้อมูล 81 คะแนน
+	Input Text    score    81
+	
+กดปุ่มคำนวณเกรด
+	Click Button    O.K.
+	
+ตรวจสอบผลลัพธ์เท่ากับ A หรือไม่
+	Wait Until Page Contains    A
+	Close Browser
+
+	
+	
+	
