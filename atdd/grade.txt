@@ -5,6 +5,6 @@ Library		Selenium2Library
 
 *** Testcases ***
 Valid case
-	Open Browser    http://demo-automated.herokuapp.com/
+	Open Browser    http://localhost:8099/demo/
 
 *** Keywords ***
