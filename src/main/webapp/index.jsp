@@ -2,13 +2,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Demo ATDD/TDD for QA Course</title>
+<title>Demo Automated Testing</title>
 </head>
 <body>
 
 	<h1>Demo ATDD/TDD for QA Course</h1>
 
-	<form action="/grade/convert">
+	<form action="<%=getServletContext().getContextPath()%>/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
 			type="submit" id="convert_button" value="O.K.">
 	</form>
