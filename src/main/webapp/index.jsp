@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Demo convert score to grade for agile testing</h1>
+   <h1>Hello World</h1>
 
 	<form action="/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
