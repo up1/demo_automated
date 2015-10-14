@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>-- Demo TDD :: Grade Converter --</title>
+<title>Demo TDD :: Grade Converter</title>
 </head>
 <body>
 
-   <h1>Demo convert score to grade</h1>
+   <h1>Demo convert score to grade for agile testing</h1>
 
 	<form action="/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
