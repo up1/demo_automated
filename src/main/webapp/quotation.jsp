@@ -5,25 +5,81 @@
 <title>Demo Automated Testing</title>
 </head>
 <body>
-	<h1>Create quotation</h1>
-	
-<table border="1">
-	<tr><td colspan="5">ชื่อโครงการ</td></tr>
-	<tr>
-		<td>ลำดับที่</td>
-		<td>รายการ</td>
-		<td>จำนวน</td>
-		<td>ราคาต่อหน่วย</td>
-		<td>จำนวนเงิน</td>
-	</tr>
-	<tr>
-		<td>1</td>
-		<td>ค่าฝึกอบรม</td>
-		<td>3</td>
-		<td>20,000</td>
-		<td>60,000</td>
-	</tr>
+
+<jsp:useBean id="quotation" class="demo.testing.QuotationView" />
+
+<center>
+    <h1>ใบเสนอราคา QUOTATION</h1>
+</center>
+
+<table border="1" width="70%" align="center">
+    <tr>
+        <td colspan="5" align="center">
+            <p><font size="5">ชื่อโครงการ</font></p>
+        </td>
+    </tr>
+    <tr align="center">
+        <td><b>ลำดับที่</b></td>
+        <td><b>รายการ</b></td>
+        <td><b>จำนวน</b></td>
+        <td><b>ราคาต่อหน่วย</b></td>
+        <td><b>จำนวนเงิน</b></td>
+    </tr>
+    <tr>
+        <td align="center">1</td>
+        <td>
+        		<jsp:getProperty name="quotation" property="title"/>
+        	</td>
+        <td align="center">
+        		<jsp:getProperty name="quotation" property="unit"/>
+        	</td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="unitPrice"/>
+        	</td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="totalPrice"/>
+        	</td>
+    </tr>
 </table>
-	
+<br/>
+<table border="1" width="70%" align="center">
+    <tr>
+        <td rowspan="7" align="center" width="52%">
+            <p><font size="5">สรุป</font></p>
+        </td>
+    </tr>
+    <tr align="center">
+        <td><b>จำนวนเงินรวม</b></td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="amountPrice"/>
+        	</td>
+    </tr>
+    <tr align="center">
+        <td><b>ส่วนลด</b></td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="discount"/>
+        	</td>
+    </tr>
+    <tr align="center">
+        <td><b>จำนวนเงินหลังจากหักส่วนลด</b></td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="amountAfterDiscount"/>
+        	</td>
+    </tr>
+    <tr align="center">
+        <td><b>ภาษีมูลค่าเพิ่ม 7%</b></td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="vat"/>
+        </td>
+    </tr>
+    <tr align="center">
+        <td><b>จำนวนเงินรวมทั้งสิ้น</b></td>
+        <td align="right">
+        		<jsp:getProperty name="quotation" property="amountAfterVat"/>
+        </td>
+    </tr>
+
+</table>
+    
 </body>
 </html>
