@@ -28,8 +28,8 @@ public class GradeController extends HttpServlet {
 		String result = "Unknown";
 		String score = req.getParameter("score");
 		if( score != null && !score.equals("") ) {
-			GradeCoverter grade = new GradeCoverter();
-			result = grade.convert(Integer.parseInt(score));
+//			GradeCoverter grade = new GradeCoverter();
+//			result = grade.convert(Integer.parseInt(score));
 		}
 		out.println(result);
 		out.flush();
