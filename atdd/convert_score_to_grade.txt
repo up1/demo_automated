@@ -16,7 +16,7 @@ Convert Score to Grade A
 	Click Button    Convert to grade
 	
 3. I should see grade A
-	Page Should Contain    You got grade A
+	Wait Util Page Contains    You got grade A
 	
 	
 	

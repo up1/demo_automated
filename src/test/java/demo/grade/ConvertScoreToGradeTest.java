@@ -13,4 +13,11 @@ public class ConvertScoreToGradeTest {
 		assertEquals("A", expectedGrade);
 	}
 	
+	@Test
+	public void shouldGetGradeB_WhenScoreIs79() {
+		MyGrade myGrade = new MyGrade();
+		String expectedGrade = myGrade.convert(81);
+		assertEquals("B", expectedGrade);
+	}
+	
 }
