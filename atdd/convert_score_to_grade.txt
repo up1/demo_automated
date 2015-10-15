@@ -1,0 +1,22 @@
+*** Setting ***
+Library    Selenium2Library
+
+*** Testcases ***
+Convert Score to Grade A
+	1. Input Score 81
+	2. Convert to grade
+	3. I should see grade A
+	
+*** Keywords ***
+1. Input Score 81
+	Open Browser    http://localhost:8080/
+	Input Text    score   81
+	
+2. Convert to grade
+	Click Button    Convert to grade
+	
+3. I should see grade A
+	Page Should Contain    You got grade A
+	
+	
+	
