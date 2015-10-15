@@ -9,7 +9,7 @@ Convert Score to Grade A
 	
 *** Keywords ***
 1. Input Score 81
-	Open Browser    http://localhost:8080/
+	Open Browser    https://demo-grade.herokuapp.com/
 	Input Text    score   81
 	
 2. Convert to grade
