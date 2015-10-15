@@ -23,6 +23,12 @@ public class CreateQuotationController extends HttpServlet {
 	}
 
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		QuotationView quotationView = new QuotationView();
+		quotationView.setTitle("DEMO");
+		
+		
+		
+		req.setAttribute("quotation", quotationView);
 		req.getRequestDispatcher("/quotation.jsp").forward(req,resp);
 	}
 }

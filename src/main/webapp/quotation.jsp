@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<jsp:useBean id="quotation" class="demo.testing.QuotationView" />
+<jsp:useBean id="quotation" class="demo.testing.QuotationView" scope="request" />
 
 <center>
     <h1>ใบเสนอราคา QUOTATION</h1>
