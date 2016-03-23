@@ -1,2 +1,1 @@
-mvn clean install
-sh target/bin/webapp
+mvn clean package tomcat7:run

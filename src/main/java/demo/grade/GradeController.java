@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet(name = "GradeController", urlPatterns = { "/grade/convert" })
+@WebServlet(name = "GradeController", urlPatterns = { "/convert" })
 public class GradeController extends HttpServlet {
 
 	@Override
