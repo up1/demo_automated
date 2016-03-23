@@ -8,7 +8,7 @@ Library    Selenium2Library
 	
 *** Keywords ***
 กรอกคะแนน 80
-    Open Browser    http://localhost:8080/grade/
+    Open Browser    http://103.208.24.22:8080/grade/
     Input Text    score   80
     Click Button    Convert to grade
 
