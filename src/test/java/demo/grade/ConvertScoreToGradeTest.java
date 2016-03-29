@@ -8,6 +8,9 @@ import org.junit.Test;
 public class ConvertScoreToGradeTest {
 
 
+    @Test
+    public void helloFirstTest() {
 
+    }
 	
 }
