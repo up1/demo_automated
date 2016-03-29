@@ -16,7 +16,7 @@ Test Teardown    Close Browser
 *** Keywords ***
 กรอกคะแนน
     [Arguments]    ${score}
-    Open Browser    http://localhost:8080/grade/
+    Open Browser    http://103.208.24.22:8080/grade/
     Input Text    score   ${score}
 
 คำนวณเกรด
