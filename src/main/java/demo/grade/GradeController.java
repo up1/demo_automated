@@ -28,9 +28,10 @@ public class GradeController extends HttpServlet {
 		String result = "Unknown";
 		String score = req.getParameter("score");
 		if( score != null && !score.equals("") ) {
-			//TODO
+			Calculator calculator = new Calculator();
+			result = calculator.convertScoreToGrade(Integer.parseInt(score));
 		}
-		out.println("You got grade " + result);
+		out.println("You Got Grade " + result);
 		out.flush();
 		out.close();
 	}

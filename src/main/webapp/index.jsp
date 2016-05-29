@@ -12,7 +12,7 @@
 
 	<form action="/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
-			type="submit" id="convert" value="Convert to grade">
+			type="submit" id="convertToGrade" value="Convert to grade">
 	</form>
 
 </body>
