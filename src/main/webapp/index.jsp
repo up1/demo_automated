@@ -8,7 +8,7 @@
 </head>
 <body>
 
-   <h1>Demo :: Grade Converter for Kiatnakin Bank</h1>
+   <h1>Kiatnakin Bank</h1>
 
 	<form action="/grade/convert">
 		Score :: <input type="text" id="score" name="score"> <input
