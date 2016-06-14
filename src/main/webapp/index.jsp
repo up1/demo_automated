@@ -4,15 +4,29 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Demo :: Grade Converter</title>
+<title>Demo</title>
 </head>
 <body>
 
-   <h1>Kiatnakin Bank</h1>
+   <h1>Login คือ ระบบที่ทุกระบบต้องมี</h1>
 
-	<form action="/grade/convert">
-		Score :: <input type="text" id="score" name="score"> <input
-			type="submit" id="convertToGrade" value="Convert to grade">
+	<form action="/demo/login">
+		<table>
+		<tr>
+		    <td>Username</td>
+		    <td><input type="text" id="username" name="username"></td>
+		</tr>
+		<tr>
+            <td>Password</td>
+            <td><input type="password" id="password" name="password"></td>
+        </tr>
+		 <tr>
+		    <td></td>
+		    <td>
+		    <input type="submit" id="login" value="เข้าสิจ๊ะ">
+		    </td>
+		</tr>
+		</table>
 	</form>
 
 </body>

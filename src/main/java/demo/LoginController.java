@@ -1,5 +1,7 @@
 package demo;
 
+import demo.grade.Login;
+
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("serial")
-@WebServlet(name = "LoginController", urlPatterns = { "/convert" })
+@WebServlet(name = "LoginController", urlPatterns = { "/login" })
 public class LoginController extends HttpServlet {
 
 	@Override
@@ -23,13 +25,18 @@ public class LoginController extends HttpServlet {
 		doProcess(req, resp);
 	}
 
-	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		ServletOutputStream out = resp.getOutputStream();
-		String score = req.getParameter("score");
-		if( score != null && !score.equals("") ) {
-			// TODO ::
+	private void doProcess(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
+		ServletOutputStream out = response.getOutputStream();
+		response.setContentType("text/html; charset=UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		String user = req.getParameter("user");
+		String pin = req.getParameter("pin");
+
+		Login login = new Login();
+		boolean isLoggedin = login.checkUser(user, pin);
+		if( isLoggedin ) {
+			out.write("สวัสดีจ๊ะ".getBytes("UTF-8"));
 		}
-		out.println("TODO Next");
 		out.flush();
 		out.close();
 	}
