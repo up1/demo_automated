@@ -1,8 +1,5 @@
 package demo;
 
-import demo.grade.CalculateGrade;
-import demo.grade.Login;
-
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -32,12 +29,8 @@ public class GradeController extends HttpServlet {
 		String score = req.getParameter("score");
 
         //TODO
-        CalculateGrade calculateGrade = new CalculateGrade();
-        String actualGrade = calculateGrade.คิดเกรด(
-                Integer.parseInt(score)
-        );
 
-        String output = "You got grade " + actualGrade;
+        String output = "You got grade ";
 		out.write(output.getBytes("UTF-8"));
 
 		out.flush();
