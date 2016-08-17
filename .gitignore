@@ -8,5 +8,5 @@ tomcat.8081/
 *.png
 *.xml
 demo.grade.iml
-./atdd/log.html
+atdd/*.html
 

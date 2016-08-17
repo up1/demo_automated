@@ -1,5 +1,7 @@
 package demo;
 
+import demo.tennis.Grade;
+
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
@@ -29,8 +31,10 @@ public class GradeController extends HttpServlet {
 		String score = req.getParameter("score");
 
         //TODO
+		Grade grade = new Grade();
+		String result = grade.convert(Integer.parseInt(score));
 
-        String output = "You got grade ";
+        String output = "You got grade " + result;
 		out.write(output.getBytes("UTF-8"));
 
 		out.flush();
