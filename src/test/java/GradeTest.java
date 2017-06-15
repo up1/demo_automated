@@ -9,9 +9,9 @@ public class GradeTest {
             new CalculateGrade();
 
     @Test public void
-    คำนวณเกรด_A_ด้วยคะแนน80() {
+    คำนวณเกรด_AA_ด้วยคะแนน80() {
         String actualGrade = calculateGrade.คิดเกรด(80);
-        เปรียบเทียบ("A", actualGrade);
+        เปรียบเทียบ("AA", actualGrade);
     }
 
     @Test public void
